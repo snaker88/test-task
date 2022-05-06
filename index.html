@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS (Cloudflare CDN) -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <title>vuejs project</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper row">
+        <div class="nav col-xl-2 col-lg-3 col-md-4 col-sm-6 col-8">
+
+            <div class="nav__menu">
+                <div class="menu-content__img">
+                    <img src="img/logo.png" alt="">
+                    <i onclick="changeMenu()" class="bi bi-list"></i>
+                </div>
+
+                <a href="" class="menu-content__link"><i class="bi bi-house"></i><span>Главная</span></a>
+                <a href="" class="menu-content__link"><i class="bi bi-cart3"></i><span>Мои магазины</span></a>
+                <a href="" class="menu-content__link"><i class="bi bi-megaphone"></i></i><span>Промоматериалы</span></a>
+                <a href="" class="menu-content__link"><i class="bi bi-person"></i><span>Персональные данные</span></a>
+                <a href="" class="menu-content__link"><i class="bi bi-wallet2"></i><span>Баланс</span></a>
+                <a href="" class="menu-content__link"><i class="bi bi-headset"></i><span>Техподдержка</span></a>
+            </div>
+        </div>
+        <div class="content col-xl-10 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="content__header header-block">
+                <div class="row">
+                    <div class="header-block__navigation navigation col-xl-6 col-lg-5  col-12">
+                        <div class="navigation-link">
+                            <a href="">Главная</a>
+                            <a class="navigation-link__child" href="">Мои магазины</a>
+                        </div>
+                    </div>
+                    <div class="header-block__user-info user-info col-xl-6 col-lg-7  col-12">
+                        <div class="user-info__mail">
+                            <a href=""><i class="bi bi-envelope-fill"></i></a>
+                        </div>
+                        <div class="user-info__profile">
+                            <img src="img/face.png" alt="">
+                            <span>Максим Добжанский</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__main main">
+                <div class="row">
+                    <button type="button" class="btn btn-primary main__button col-12" data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="bi bi-plus"></i><span>Создать свой магазин</span>
+                    </button >
+                    <h2 class="col-12">Управление магазинами</h2>
+                    <div class="main__control-block control-blocks col-11">
+                        <div class="control-block-title row">
+                            <div class="control-block__id col-md-2 col-12">№</div>
+                            <div class="control-block__name col-md-2 col-12">Имя</div>
+                            <div class="control-block__url col-md-4 col-12">Адрес</div>
+                            <div class="control-block__buttons col-md-4 col-12">Действия</div>
+                        </div>
+                       
+                        <div class="control-block row">
+                            <div class="control-block__id col-md-2 col-12">1628</div>
+                            <div class="control-block__name col-md-2 col-12">Дипломная работа</div>
+                            <div class="control-block__url col-md-4 col-12">http://www.work5.ru/services</div>
+                            <div class="control-block__buttons col-md-4 col-12">
+                                <button><i class="bi bi-pencil"></i><span>Редактировать</span></button>
+                    <button class="block__button1"><i class="bi bi-x"></i><span>Удалить</span></button>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="control-block row">
+                <div class="control-block__id col-md-2 col-12">1628</div>
+                <div class="control-block__name col-md-2 col-12">Дипломная работа</div>
+                <div class="control-block__url col-md-4 col-12">http://www.work5.ru/services</div>
+                <div class="control-block__buttons col-md-4 col-12">
+                    <button><i class="bi bi-pencil"></i><span>Редактировать</span></button>
+                    <button class="block__button1"><i class="bi bi-x"></i><span>Удалить</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Создать магазин</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="row">
+                    <div class="modal-body">
+                        <span>Шаблон</span>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Выпадающая ссылка
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <span>Цветовая схема</span>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Выпадающая ссылка
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input"><input type="text" placeholder="Например: ivangrozniy"><button type="button" class="btn btn-primary main__button">.work5.ru</button></div>
+                        <div class="modal-warning">
+                            <img src="img/warning.png" alt="">
+                            <p>В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по ссылке</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary main__button" data-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary main__button">Создать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let click = 0
+
+        function changeMenu() {
+            click++
+            if (click % 2 === 1) {
+
+                document.querySelector('.nav').style.transform = 'translateX(0%)'
+                document.querySelector('.content').style.background = 'rgb(139 139 255)'
+                document.querySelector('.content').style.opacity = '.08'
+
+            } else {
+                document.querySelector('.nav').style.transform = 'translateX(-100%)'
+                document.querySelector('.content').style.background = '#F8FAFF'
+                document.querySelector('.content').style.opacity = '1'
+
+            }
+        }
+    </script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+
+    !-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
